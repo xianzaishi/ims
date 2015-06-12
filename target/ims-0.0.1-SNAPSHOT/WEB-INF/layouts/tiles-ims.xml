@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+	<!-- 后台模板 -->
+    <definition name="ims.base" template="/WEB-INF/pages/commons/layouts.jsp">
+        <put-attribute name="head" value="/WEB-INF/pages/commons/head.jsp"/>
+        <put-attribute name="left" value="/WEB-INF/pages/commons/left.jsp"/>
+        <put-attribute name="right" value="/WEB-INF/pages/commons/right.jsp"/>
+        <put-attribute name="foot" value="/WEB-INF/pages/commons/foot.jsp"/>
+    </definition> 
+    
+    <!-- 登陆页面 -->
+    <definition name="loginView" template="/WEB-INF/pages/login.jsp">
+    </definition>
+    
+    <!-- 主页 -->
+    <definition name="indexView" extends="ims.base">
+        <put-attribute name="right" value="/WEB-INF/pages/index.jsp"/>
+    </definition>
+    
+    <!-- ims主页 -->
+    <definition name="imsIndexView" extends="ims.base">
+        <put-attribute name="right" value="/WEB-INF/pages/ims/back-end/index.jsp"/>
+    </definition>  
+    
+    <!-- 用户管理主页 -->
+    <definition name="userManagementView" extends="ims.base">
+        <put-attribute name="right" value="/WEB-INF/pages/ims/back-end/user/index.jsp"/>
+    </definition>  
+    
+    <!-- 增加用户 -->
+    <definition name="addUser" template="/WEB-INF/pages/ims/back-end/user/add.jsp">
+    </definition>
+    
+    <!-- 编辑用户 -->
+    <definition name="editUser" template="/WEB-INF/pages/ims/back-end/user/edit.jsp">
+    </definition>
+    
+    <!-- 操作成功 -->
+    <definition name="success" template="/WEB-INF/pages/ims/back-end/success.jsp">
+    </definition>
+    
+    <!-- 角色管理主页 -->
+    <definition name="roleManagementView" extends="ims.base">
+        <put-attribute name="right" value="/WEB-INF/pages/ims/back-end/role/index.jsp"/>
+    </definition>
+    
+    <!-- 增加角色 -->
+    <definition name="addRole" template="/WEB-INF/pages/ims/back-end/role/add.jsp">
+    </definition>
+    
+    <!-- 编辑角色 -->
+    <definition name="editRole" template="/WEB-INF/pages/ims/back-end/role/edit.jsp">
+    </definition>
+    
+    <!-- 搜索角色 -->
+    <definition name="searchRole" extends="ims.base">
+        <put-attribute name="right" value="/WEB-INF/pages/ims/back-end/role/search.jsp"/>
+    </definition>
+    
+    <!-- 搜索人员 -->
+    <definition name="searchUser" extends="ims.base">
+        <put-attribute name="right" value="/WEB-INF/pages/ims/back-end/user/search.jsp"/>
+    </definition>
+</tiles-definitions>
